@@ -23,7 +23,7 @@ const movieTitles = [
 
 // Generate random movies
 const generateMovies = () => {
-  return Array(300)
+  return Array(30)
     .fill()
     .map((_, i) => ({
       id: i + 1,
@@ -56,7 +56,7 @@ const createMovieCard = movie => {
         </div>
     `;
   card.addEventListener('click', () => {
-    window.location.href = `details.html?id=${movie.id}`;
+    window.location.href = `details.html?id=${movie.id}+${movie.title}`;
   });
   return card;
 };
